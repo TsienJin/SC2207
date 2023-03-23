@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/Users/tjay/Dropbox/NTU/Y2S2/SC2207 -- Introduction to Databases/SC2207 Group/SC2207-Groupwork/scripts/env/bin/python3.9" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())

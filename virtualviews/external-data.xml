@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <object-set>
+    <schema path="a37g3.dbo">
+      <view name="Publications" query="SELECT P.PubID, P.Publisher, P.Year, X.Type, X.Title, X.Issue&#xa;FROM a37g3.dbo.Publication P&#xa;LEFT JOIN (&#xa;    SELECT B.Title, B.PubID, Null as Issue, &apos;Book&apos; as Type&#xa;    FROM a37g3.dbo.Books B&#xa;    UNION &#xa;    SELECT M.Title, M.PubID, M.Issue, &apos;Magazine&apos; as Type&#xa;    FROM a37g3.dbo.Magazines M&#xa;) AS X ON P.PubID = X.PubID &#xa;ORDER BY P.PubID&#xa;&#xa;             "/>
+    </schema>
+  </object-set>
+</data>
