@@ -1,0 +1,4 @@
+INSERT INTO a37g3.dbo.Magazines (PubID, Title, Issue)
+SELECT P.PubID, 'Magazine Title ' + CAST(P.PubID AS VARCHAR(10)), ROW_NUMBER() OVER (PARTITION BY P.PubID ORDER BY (SELECT NULL))
+FROM a37g3.dbo.Publication P
+WHERE NOT EXISTS (SELECT 1 FROM a37g3.dbo.Magazines M WHERE M.PubID = P.PubID);

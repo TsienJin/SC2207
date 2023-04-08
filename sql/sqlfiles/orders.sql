@@ -1,0 +1,22 @@
+INSERT INTO a37g3.dbo.Orders (DateTime, ShippingAddress, CustomerID, OrderID)
+VALUES
+('2022-01-01 09:00:00', 'Shipping Address 1', 12345, 1),
+('2022-01-02 10:30:00', 'Shipping Address 2', 25189, 2),
+('2022-01-03 12:15:00', 'Shipping Address 3', 25974, 3),
+('2022-01-04 08:45:00', 'Shipping Address 4', 29573, 4),
+('2022-01-05 14:20:00', 'Shipping Address 5', 31895, 5),
+('2022-01-06 16:00:00', 'Shipping Address 6', 37590, 6),
+('2022-01-07 11:30:00', 'Shipping Address 7', 43786, 7),
+('2022-01-08 13:45:00', 'Shipping Address 8', 45801, 8),
+('2022-01-09 09:00:00', 'Shipping Address 9', 47328, 9),
+('2022-01-10 17:00:00', 'Shipping Address 10', 60219, 10),
+('2022-01-11 10:15:00', 'Shipping Address 11', 65403, 11),
+('2022-01-12 15:30:00', 'Shipping Address 12', 69382, 12),
+('2022-01-13 08:30:00', 'Shipping Address 13', 73190, 13),
+('2022-01-14 13:00:00', 'Shipping Address 14', 78963, 14),
+('2022-01-15 11:45:00', 'Shipping Address 15', 83213, 15),
+('2022-01-16 14:15:00', 'Shipping Address 16', 83659, 16),
+('2022-01-17 10:00:00', 'Shipping Address 17', 92748, 17),
+('2022-01-18 12:30:00', 'Shipping Address 18', 94856, 18),
+('2022-01-19 16:45:00', 'Shipping Address 19', 96725, 19),
+('2022-01-20 09:45:00', 'Shipping Address 20', 98294, 20);
