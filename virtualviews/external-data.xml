@@ -2,6 +2,8 @@
 <data>
   <object-set>
     <schema path="a37g3.dbo">
+      <view name="Complaints" query="SELECT f.CustomerID, x.ComplaintsID, x.origin&#xa;FROM (&#xa;    SELECT b.ComplaintsID, &apos;Bookstore&apos; AS origin&#xa;    FROM a37g3.dbo.ComplaintsOnBookstore b&#xa;    UNION&#xa;    SELECT o.ComplaintsID, &apos;Order&apos; AS origin&#xa;    FROM a37g3.dbo.ComplaintsOnOrders o&#xa;     ) AS x&#xa;LEFT JOIN a37g3.dbo.CustomerComplaintsFiled f ON f.ComplaintsID = x.ComplaintsID  &#xa;&#xa;"/>
+      <view name="HarryPorterHistory" query="SELECT ph.Price, ph.StartDate, ph.EndDate&#xa;FROM a37g3.dbo.PriceHistory ph&#xa;WHERE ph.PubID IN (&#xa;    SELECT b.PubID&#xa;    FROM a37g3.dbo.Books b&#xa;    WHERE b.Title = &apos;Harry Porter Finale&apos;&#xa;    )"/>
       <view name="Publications" query="SELECT P.PubID, P.Publisher, P.Year, X.Type, X.Title, X.Issue&#xa;FROM a37g3.dbo.Publication P&#xa;LEFT JOIN (&#xa;    SELECT B.Title, B.PubID, Null as Issue, &apos;Book&apos; as Type&#xa;    FROM a37g3.dbo.Books B&#xa;    UNION &#xa;    SELECT M.Title, M.PubID, M.Issue, &apos;Magazine&apos; as Type&#xa;    FROM a37g3.dbo.Magazines M&#xa;) AS X ON P.PubID = X.PubID &#xa;ORDER BY P.PubID&#xa;&#xa;             "/>
     </schema>
   </object-set>
